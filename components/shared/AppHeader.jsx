@@ -19,16 +19,13 @@ function AppHeader() {
     }
   }
 
-  const logoSvg = `
+  const getLogoSvg = (textColor, inverseTextColor) => `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322.2 68" width="322.2" height="68">
-  <style>
-    .text-color { fill: var(--text-color, #000000); }
-  </style>
-  <rect rx="4" ry="4" width="68" height="68" class="text-color" />
-  <text x="34" y="43" font-family="sans-serif" font-size="32" text-anchor="middle" fill="#FFFFFF">HB</text>
-  <text x="157.5" y="43" font-family="sans-serif" font-size="24" text-anchor="middle" class="text-color">Henry Borska</text>
-</svg>
-`;
+	<rect rx="4" ry="4" width="68" height="68" fill="${textColor}" />
+	<text x="34" y="43" font-family="sans-serif" font-size="32" text-anchor="middle" fill="${inverseTextColor}">HB</text>
+	<text x="157.5" y="43" font-family="sans-serif" font-size="24" text-anchor="middle" fill="${textColor}">Henry Borska</text>
+  </svg>
+  `;
 
   return (
     <motion.nav
@@ -42,11 +39,13 @@ function AppHeader() {
         <div>
           <Link href="/">
             <div
-              style={{
-                "--text-color": activeTheme === "light" ? "#FFFFFF" : "#000000",
-              }}
               className="w-36 cursor-pointer"
-              dangerouslySetInnerHTML={{ __html: logoSvg }}
+              dangerouslySetInnerHTML={{
+                __html: getLogoSvg(
+                  activeTheme === "light" ? "#FFFFFF" : "#000000",
+                  activeTheme === "light" ? "#000000" : "#FFFFFF"
+                ),
+              }}
             ></div>
           </Link>
         </div>
@@ -97,11 +96,11 @@ function AppHeader() {
               : "hidden"
           }
         >
-          {/* <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
             <Link href="/" aria-label="Home">
               Home
             </Link>
-          </div> */}
+          </div>
           <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
             <Link href="/projects" aria-label="Projects">
               Projects
@@ -121,11 +120,11 @@ function AppHeader() {
 
         {/* Header links large screen */}
         <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-          {/* <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
             <Link href="/" aria-label="Home">
               Home
             </Link>
-          </div> */}
+          </div>
           <div
             className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
             aria-label="Projects"

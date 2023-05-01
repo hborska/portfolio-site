@@ -41,23 +41,13 @@ export const projectsData = [
       CompanyInfo: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
-        },
-        {
-          id: uuidv4(),
-          title: "Services",
-          details: "Web Development",
-        },
-        {
-          id: uuidv4(),
           title: "Website",
-          details: "https://company.com",
+          details: "x", // insert website link
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Github",
+          details: "www.google.com", // insert github link
         },
       ],
       ObjectivesHeading: "Objective",
@@ -76,7 +66,7 @@ export const projectsData = [
           ],
         },
       ],
-      ProjectDetailsHeading: "Challenge",
+      ProjectDetailsHeading: "Project Summary",
       ProjectDetails: [
         {
           id: uuidv4(),
