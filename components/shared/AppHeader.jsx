@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,6 +10,7 @@ function AppHeader() {
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [activeTheme, setTheme] = useThemeSwitcher();
+  const [logoSvg, setLogoSvg] = useState("");
 
   function toggleMenu() {
     if (!showMenu) {
@@ -27,6 +28,15 @@ function AppHeader() {
   </svg>
   `;
 
+  useEffect(() => {
+    setLogoSvg(
+      getLogoSvg(
+        activeTheme === "light" ? "#FFFFFF" : "#000000",
+        activeTheme === "light" ? "#000000" : "#FFFFFF"
+      )
+    );
+  }, [activeTheme]);
+
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -41,10 +51,7 @@ function AppHeader() {
             <div
               className="w-36 cursor-pointer"
               dangerouslySetInnerHTML={{
-                __html: getLogoSvg(
-                  activeTheme === "light" ? "#FFFFFF" : "#000000",
-                  activeTheme === "light" ? "#000000" : "#FFFFFF"
-                ),
+                __html: logoSvg,
               }}
             ></div>
           </Link>

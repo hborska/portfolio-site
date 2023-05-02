@@ -1,31 +1,44 @@
 import Image from "next/image";
-import { FiClock, FiTag } from "react-icons/fi";
+import { FiClock, FiTag, FiArrowLeftCircle } from "react-icons/fi";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
+import { useRouter } from "next/router"; // Import useRouter
 
 function ProjectSingle(props) {
+  const router = useRouter(); // Instantiate useRouter
+
+  const goBack = () => {
+    router.back(); // Navigate back to the previous page
+  };
+
   return (
     <div className="container mx-auto">
       <PagesMetaHead title={props.project.title} />
 
       {/* Header */}
       <div>
-        <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+        <FiArrowLeftCircle
+          className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light cursor-pointer mt-14"
+          onClick={goBack}
+        />
+        <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light my-4 mb-7">
           {props.project.ProjectHeader.title}
         </p>
+
         <div className="flex">
           <div className="flex items-center mr-10">
             <FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />
             <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-              {props.project.ProjectHeader.publishDate}
+              {props.project.ProjectHeader.startDate} -{" "}
+              {props.project.ProjectHeader.endDate || "current"}
             </span>
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
             <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
               {props.project.ProjectHeader.tags}
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -36,12 +49,11 @@ function ProjectSingle(props) {
             <div className="mb-10 sm:mb-0" key={project.id}>
               <Image
                 src={project.img}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none "
                 alt={project.title}
                 key={project.id}
-                layout="responsive"
-                width={100}
-                height={90}
+                width={400}
+                height={360}
               />
             </div>
           );
@@ -64,17 +76,18 @@ function ProjectSingle(props) {
                       className="font-general-regular text-ternary-dark dark:text-ternary-light"
                       key={info.id}
                     >
-                      <a
-                        href={info.details}
-                        className={
-                          info.title === "Website" || info.title === "Phone"
-                            ? "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                            : ""
-                        }
-                        aria-label="Project Website and Phone"
-                      >
-                        {info.details}
-                      </a>
+                      <>
+                        {info.title}:{" "}
+                        <a
+                          href={info.details}
+                          className={
+                            "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+                          }
+                          aria-label="Project Website and Phone"
+                        >
+                          {info.details}
+                        </a>
+                      </>
                     </li>
                   </>
                 );
