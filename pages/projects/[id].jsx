@@ -43,17 +43,17 @@ function ProjectSingle(props) {
       </div>
 
       {/* Gallery */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 mt-12">
         {props.project.ProjectImages.map((project) => {
           return (
-            <div className="mb-10 sm:mb-0" key={project.id}>
+            <div className="mb-10 md:mb-0" key={project.id}>
               <Image
                 src={project.img}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none "
+                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none w-full object-cover"
                 alt={project.title}
                 key={project.id}
-                width={400}
-                height={360}
+                width={640}
+                height={480}
               />
             </div>
           );
@@ -80,6 +80,8 @@ function ProjectSingle(props) {
                         {info.title}:{" "}
                         <a
                           href={info.details}
+                          target="_blank"
+                          style={{ wordWrap: "break-word" }}
                           className={
                             "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
                           }

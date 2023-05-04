@@ -50,9 +50,7 @@ export const projectsData = [
           details: "https://github.com/sunnyjaycer/supercard", // insert github link
         },
       ],
-      ObjectivesHeading: "Objective",
-      ObjectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -65,12 +63,17 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+            "SuperCard is a project I worked on with a couple of friends during the ETHGlobal NFT Hack 2022 hackathon. SuperCard lets an employer pay an employee with a cashflow streamed using the SuperCard NFT contract as a conduit and the NFT as a pointer for the receiver of the stream, effectively tokenizing the income.",
         },
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+            "Employees can then open a line of credit against their income and let SuperCard handle the interest and amortization deductions when they borrow. Once they borrow, a payment stream kicks in, covering both the principal and interest within three months. Plus, there's no compounding since interest is paid in real-time!",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "This project was one of my first dives into web3 tech. I mainly focused on creating the frontend with React and connecting it to the contracts using ethers. I also teamed up with my teammate to debug and write tests for the smart contracts.",
         },
       ],
     },
@@ -127,9 +130,7 @@ export const projectsData = [
             "https://polygonscan.com/address/0x5b790947e251f8472a2083787eb6ecc7925b5c30",
         },
       ],
-      ObjectivesHeading: "Objective",
-      ObjectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -142,12 +143,27 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+            "TeamDiff is definitely the project that has helped me grow the most as a developer.",
         },
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+            "I was starting to become interested in web3 after Supercard, and was looking for a new project to work on (not necessarily web3 though). A friend of a friend reached out to me and got me to join him in working on this project, along with several others.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "The product was essentially fantasy football, but on the blockchain, and instead of football it was eSports (League of Legends). Each player was its own digital asset (NFT), and we had a whole launch event where people who got their names on the whitelist could open their packs for 5 random LCS players. It was essentially an experimentation with blockchain technology, seeing what it could do. The launch was relatively successful, although we had a bot that swept a lot of the NFTs by generating different wallets and claiming the packs. We had a beta run of a fantasy season that was relatively successful, although it was hard to maintain a lot of the initial interest after the pack opening.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "I ended up being the lead for engineering, leading a team of 5 super awesome engineers. I specialized in developing the smart contracts for the project, which was exciting for me because Solidity was a completely new technology. I learned a lot  about Solidity, and also other useful stuff like how blockchains work, encryption, and low-level programming. We used a very new and experimental proxy contract design, where each league created was essesntially a proxy of an original league contract, where the only difference was the contract's data (players in the league, size of the league, etc.). It was really cool to work with such cutting-edge technology.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "We ended up abandoning the project due to members of the team needing to leave for full time work. Regardless of the outcome, I am still immensely proud of the work we did. I learned a ton, and made some lifelong friends.",
         },
       ],
     },
@@ -194,9 +210,7 @@ export const projectsData = [
             "https://etherscan.io/address/0x2AeA2f0183632b4EaA909EFed58A6E0B8E48Ef25",
         },
       ],
-      ObjectivesHeading: "Objective",
-      ObjectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -250,9 +264,7 @@ export const projectsData = [
           details: "https://cacheit.web.app/#", // insert website link
         },
       ],
-      ObjectivesHeading: "Objective",
-      ObjectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+
       Technologies: [
         {
           title: "Tools & Technologies",
