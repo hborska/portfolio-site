@@ -29,7 +29,7 @@ function ProjectsGrid() {
           Below you can see some of the personal projects I've been working on
           over the past couple years. They span many different technologies and
           use cases, ranging from fantasy eSports using Solidity and Polygon, to
-          basic Next js sites, to React Native apps.
+          basic Next js sites, to React Native scavenger hunt apps.
         </h3>
       </div>
 
