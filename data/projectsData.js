@@ -302,7 +302,7 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "This has been a really fun project to work on. It’s my first real mobile app (besides a crappy one for a class awhile ago), so it’s been great to see how mobile dev differs from building desktop web apps (and how it’s similar). My cofounder in the project is Trey Rudolph (https://twitter.com/T_Goody3), who you should also check out if you’re looking for a great SWE. I am temporarily putting this project on pause to focus on the end of college, as well as some summer travel plans I have.",
+            "This has been a really fun project to work on. It's my first real mobile app (besides a crappy one for a class awhile ago), so it's been great to see how mobile dev differs from building desktop web apps (and how it's similar). My cofounder in the project is Trey Rudolph (https://twitter.com/T_Goody3), who you should also check out if you're looking for a great SWE. I am temporarily putting this project on pause to focus on the end of college, as well as some summer travel plans I have.",
         },
       ],
     },
