@@ -3,12 +3,29 @@ import { FiClock, FiTag, FiArrowLeftCircle } from "react-icons/fi";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 import { useRouter } from "next/router"; // Import useRouter
+import React from "react";
 
 function ProjectSingle(props) {
   const router = useRouter(); // Instantiate useRouter
 
   const goBack = () => {
     router.back(); // Navigate back to the previous page
+  };
+
+  const renderTextWithLinks = (text) => {
+    const regex = /\b(https?:\/\/[^\s]+)\b/g;
+    const parts = text.split(regex);
+
+    return parts.map((part, index) => {
+      if (part && part.match(regex)) {
+        return (
+          <a key={index} href={part} target="_blank" rel="noopener noreferrer">
+            {part}
+          </a>
+        );
+      }
+      return <React.Fragment key={index}>{part}</React.Fragment>;
+    });
   };
 
   return (
@@ -80,7 +97,6 @@ function ProjectSingle(props) {
                         {info.title}:{" "}
                         <a
                           href={info.details}
-                          target="_blank"
                           style={{ wordWrap: "break-word" }}
                           className={
                             "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
@@ -119,7 +135,7 @@ function ProjectSingle(props) {
                 key={details.id}
                 className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
               >
-                {details.details}
+                {renderTextWithLinks(details.details)}
               </p>
             );
           })}

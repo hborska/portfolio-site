@@ -223,12 +223,17 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+            "Community Creations was a project I did in collaboration with Will Hunter (https://twitter.com/wlhunter25) and x0r Art (https://twitter.com/x0rart). x0r art has a community of tech, crypto, and digital art enthusiasts called “MEV Army”. Given that there was a large interest in digital art in the community, many members of the community had their own digital pieces they wanted to share with others. We decided it could be useful if there was a place for everyone in the community to be able to share their art pieces.",
         },
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+            "That's when we decided to create Community Creations. Each person in the community just fills out a google form with their artist name, a couple other fields, and the digital art they want to showcase. We would turn this into a “creation” for them to be listed on our platform. Each creation is essentially an ERC1155 token of unlimited cap. We made it so that users can choose to make their creations free (free to mint, user only pays gas fees) or paid. For paid creations, we used the Chainlink oracle to keep a fixed price of $10 USD per creation. That is, to mint a paid creation, you would always pay $10 USD, regardless of the price of ETH. Additionally, users could specify whether they wanted the creation to only be available to MEV Army members (token-gated) or available to everyone.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "I did a lot of work for this project. I created and tested the contracts with x0r, and did the majority of the work creating the frontend along with Will. This project definitely deepened my knowledge of not only Solidity, but also more complex unit testing, as we tried to simulate every possible case where something could go wrong with the payment system. I also gained experience with Next.js and managing more complex state.",
         },
       ],
     },
@@ -263,6 +268,11 @@ export const projectsData = [
           title: "Website",
           details: "https://cacheit.web.app/#", // insert website link
         },
+        {
+          id: uuidv4(),
+          title: "App Store",
+          details: "https://apps.apple.com/us/app/cacheitall/id1664663450",
+        },
       ],
 
       Technologies: [
@@ -277,12 +287,22 @@ export const projectsData = [
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+            "Cache-it is a scavenger hunt app that combines elements from several different areas of tech: web3, AR, and AI.",
         },
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+            "In the app, users can login by connecting an existing wallet using WalletConnect, or create a new wallet which we do for them through a custodial wallet provider called Venly. Users can then go around and see what caches have been created near them. This is similar to the “Geocaching” app where users find actual geocaches hidden throughout the world, except in this case the geocaches are entirely digital. When a user finds an item in a cache, they have an AR screen that pops open, similar to Pokemon Go. The user can then tap the item to claim it. If the creator of the cache wants to, they can configure additional tasks the user must do before claiming an item in their cache, such as answering a trivia question. The user then can claim the item, which mints it to their wallet.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Users can also create their own geocaches. They go to the “new cache” screen and specify properties such as the name of their cache, the size of it (in meters), and some information about it. We then use some AI APIs to generate a cool origin story of how the cache item was created along with artwork for it. We also have been adding more customizability for what caches can look like. For example, we are adding more things to do upon finding a cache item than just trivia questions, adding the option to make multi-step caches, and more. The end goal for this app is to target brands, making it a platform where brands can create excitement among their customers by dropping different kinds of caches. For example, if Nike wanted to create hype around a new shoe, they could drop a cache of 10 items in NYC, and the first 10 people to claim (mint) the cache could redeem it for a free pair of the shoes.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "This has been a really fun project to work on. It’s my first real mobile app (besides a crappy one for a class awhile ago), so it’s been great to see how mobile dev differs from building desktop web apps (and how it’s similar). My cofounder in the project is Trey Rudolph (https://twitter.com/T_Goody3), who you should also check out if you’re looking for a great SWE. I am temporarily putting this project on pause to focus on the end of college, as well as some summer travel plans I have.",
         },
       ],
     },
