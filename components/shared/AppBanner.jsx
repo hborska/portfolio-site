@@ -36,7 +36,8 @@ function AppBanner() {
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          I'm a full-stack SWE working at Amazon.
+          I'm a full-stack SWE and recent WashU grad. I will be starting as an
+          SDE at Amazon this year.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -49,8 +50,8 @@ function AppBanner() {
           className="flex justify-center sm:block"
         >
           <a
-            download="HenryBorskaResume2023.pdf"
-            href="/files/HenryBorskaResume2023.pdf"
+            download="HenryBorska2023.pdf"
+            href="/files/HenryBorska2023.pdf"
             className="font-general-medium flex justify-center items-center w-max whitespace-nowrap mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
             aria-label="Download Resume"
           >
