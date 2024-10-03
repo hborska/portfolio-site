@@ -15,7 +15,7 @@ function ProjectsGrid() {
         </p>
       </div>
 
-      <div className="mt-10 sm:mt-16">
+      <div className="mt-5 sm:mt-8">
         <h3
           className="
                         font-general-regular 
@@ -26,9 +26,12 @@ function ProjectsGrid() {
                         mb-12
                         "
         >
-          Below you can see some of the personal projects I've been working on
-          over the past couple years. They span many different technologies and
-          use cases, ranging from fantasy eSports using Solidity and Polygon, to
+          Below you can find some of the personal projects I've worked on over
+          the past few years. These are currently just projects from college and
+          don't reflect my current skill level, but keeping here because I'm
+          proud of what I've worked on in the past, and I still think they're
+          interesting projects. They span many different technologies and use
+          cases, ranging from fantasy eSports using Solidity and Polygon, to
           basic Next js sites, to React Native scavenger hunt apps.
         </h3>
       </div>

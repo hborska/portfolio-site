@@ -19,7 +19,7 @@ const socialLinks = [
   {
     id: 4,
     icon: <FiMail />,
-    url: "mailto:henryborska@wustl.edu",
+    url: "mailto:HLB948@gmail.com",
   },
 ];
 
